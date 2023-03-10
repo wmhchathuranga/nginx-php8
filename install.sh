@@ -15,13 +15,10 @@ sudo apt install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-unlink /etc/nginx/sites-enabled/default
 
-rm /etc/nginx/sites-available/default
+mv phpmyadmin.conf /etc/nginx/sites-available/
 
-mv default /etc/nginx/sites-available/
-
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/phpmyadmin.conf /etc/nginx/sites-enabled/phpmyadmin.conf
 
 echo -e "\n\nInstalling PHP & Requirements\n"
 
