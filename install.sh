@@ -15,7 +15,6 @@ sudo apt install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
-
 mv phpmyadmin.conf /etc/nginx/sites-available/
 
 ln -s /etc/nginx/sites-available/phpmyadmin.conf /etc/nginx/sites-enabled/phpmyadmin.conf
